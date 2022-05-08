@@ -1,4 +1,4 @@
-package com.refugeehelper
+package com.example.refugeehelper
 
 import org.junit.Test
 
