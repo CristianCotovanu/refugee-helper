@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RefugeeHelper">
         <activity
+            android:name=".activities.FoundationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_foundation"
+            android:theme="@style/Theme.RefugeeHelper.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
