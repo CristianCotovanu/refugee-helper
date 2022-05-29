@@ -1,4 +1,4 @@
-package com.example.refugeehelper.activities
+package com.example.refugeehelper
 
 import android.os.Bundle
 import android.view.Menu

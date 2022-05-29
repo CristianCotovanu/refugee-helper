@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "716225708523",
+    "project_id": "refugeehelper-995f5",
+    "storage_bucket": "refugeehelper-995f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716225708523:android:64f97a04ab0fdf7492d9ae",
+        "android_client_info": {
+          "package_name": "com.example.refugeehelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716225708523-a4vpq8tvgrapp9db7jb9i12librpimgl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmfZLha9d8U_2oqTIdRj5Q41dg9UPx80U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716225708523-a4vpq8tvgrapp9db7jb9i12librpimgl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

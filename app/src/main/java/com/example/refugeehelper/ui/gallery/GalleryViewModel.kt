@@ -1,4 +1,4 @@
-package com.example.refugeehelper.activities.ui.gallery
+package com.example.refugeehelper.ui.gallery
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

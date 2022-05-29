@@ -3,7 +3,6 @@ package com.example.refugeehelper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.refugeehelper.activities.FoundationActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -22,5 +21,12 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+
+
+
     }
+
+//    @GET("Medications.json")
+//    fun getMedications(): Call<List<Medication>>
 }
