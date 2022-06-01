@@ -220,7 +220,7 @@ class FoundationActivity : AppCompatActivity() {
             )
             Snackbar.make(
                 view,
-                "Foundation " + nameInput.text.toString() + " was added sucessfully",
+                "Foundation " + nameInput.text.toString() + " was added successfully",
                 Snackbar.LENGTH_LONG
             )
                 .setAction("Action", null).show()
