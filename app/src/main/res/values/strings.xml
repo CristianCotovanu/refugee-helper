@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">Refugee Helper</string>
+    <string name="app_name">Refugee Helper First</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="channel_name">Channel</string>
+    <string name="channel_description">Notification channel description</string>
 
     <!--    Foundations strings section -->
     <string name="foundations_bottom_menu">Foundations</string>
@@ -28,4 +31,6 @@
     <string name="useful_information_bottom_menu">Useful Information</string>
 
     <string name="add_new_entry">Add new entry</string>
+    <string name="emergency_call">Emergency call</string>
+    <string name="emergency_call_button_text">Emergency Call</string>
 </resources>
