@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "716225708523",
-    "project_id": "refugeehelper-995f5",
-    "storage_bucket": "refugeehelper-995f5.appspot.com"
+    "project_number": "699228794085",
+    "firebase_url": "https://testproject-9b26b-default-rtdb.firebaseio.com",
+    "project_id": "testproject-9b26b",
+    "storage_bucket": "testproject-9b26b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:716225708523:android:64f97a04ab0fdf7492d9ae",
+        "mobilesdk_app_id": "1:699228794085:android:c2924e23834087b162f80c",
         "android_client_info": {
           "package_name": "com.example.refugeehelper"
         }
       },
       "oauth_client": [
         {
-          "client_id": "716225708523-a4vpq8tvgrapp9db7jb9i12librpimgl.apps.googleusercontent.com",
+          "client_id": "699228794085-00encs3oimjrld46lk4c58qpbc77nel5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAmfZLha9d8U_2oqTIdRj5Q41dg9UPx80U"
+          "current_key": "AIzaSyAh49AcaQn6JJz1qez4UYYWzv0qUEXwFbo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "716225708523-a4vpq8tvgrapp9db7jb9i12librpimgl.apps.googleusercontent.com",
+              "client_id": "699228794085-00encs3oimjrld46lk4c58qpbc77nel5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

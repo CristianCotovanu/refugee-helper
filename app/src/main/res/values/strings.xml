@@ -1,14 +1,31 @@
 <resources>
     <string name="app_name">Refugee Helper</string>
-    <string name="title_activity_foundation">FoundationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <!--    Foundations strings section -->
+    <string name="foundations_bottom_menu">Foundations</string>
+    <string name="title_activity_foundation">FoundationActivity</string>
+    <string name="nav_header_foundation_title">Foundations</string>
+    <string name="nav_header_foundation_subtitle">Here you will find a couple of foundations and their contact. Do not hesitate to ask for help with any problem!</string>
+    <string name="nav_left_foundations_home">Home</string>
+    <string name="menu_foundation">Foundations</string>
+
+    <!--    Requests strings section -->
+    <string name="requests_bottom_menu">Requests</string>
+    <string name="title_activity_request">RequestActivity</string>
+    <string name="nav_header_requests_title">Needs and requests</string>
+    <string name="nav_header_requests_subtitle">This menu is dedicated for people who need a helping hand with housing, work or other needs. You can see place your requests in the specific section.</string>
+    <string name="nav_left_menu_work">Work</string>
+    <string name="nav_left_menu_housing">Housing</string>
+
+    <!--    Transport information strings section -->
+    <string name="transport_information_bottom_menu">Transport Information</string>
+
+    <!--    Useful information strings section -->
+    <string name="useful_information_bottom_menu">Useful Information</string>
+
+    <string name="add_new_entry">Add new entry</string>
 </resources>

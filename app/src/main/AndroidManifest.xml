@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.refugeehelper">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RefugeeHelper">
         <activity
-            android:name=".FoundationActivity"
+            android:name=".requests.RequestActivity"
+            android:exported="false"
+            android:label="@string/title_activity_request"
+            android:theme="@style/Theme.RefugeeHelper.NoActionBar" />
+        <activity
+            android:name=".foundations.FoundationActivity"
             android:exported="false"
             android:label="@string/title_activity_foundation"
             android:theme="@style/Theme.RefugeeHelper.NoActionBar" />

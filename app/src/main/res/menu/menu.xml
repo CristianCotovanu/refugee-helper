@@ -3,15 +3,20 @@
     <item
         android:id="@+id/ic_foundation"
         android:icon="@drawable/ic_foundation"
-        android:title="Foundations" />
+        android:title="@string/foundations_bottom_menu" />
+
+    <item
+        android:id="@+id/ic_requests"
+        android:icon="@drawable/ic_requests"
+        android:title="@string/requests_bottom_menu" />
 
     <item
         android:id="@+id/ic_transport"
         android:icon="@drawable/ic_transport"
-        android:title="Transport Informations" />
+        android:title="@string/transport_information_bottom_menu" />
 
     <item
         android:id="@+id/ic_info"
         android:icon="@drawable/ic_info"
-        android:title="Useful Information" />
+        android:title="@string/useful_information_bottom_menu" />
 </menu>
