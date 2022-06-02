@@ -6,7 +6,6 @@ import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -14,19 +13,16 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.refugeehelper.databinding.ActivityMainBinding
 import com.example.refugeehelper.foundations.FoundationActivity
+import com.example.refugeehelper.important.ImportantInformationActivity
 import com.example.refugeehelper.requests.RequestActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-//    private lateinit var emergencyCallButton: FloatingActionButton
-
-    private val requestCall = 1
-
+    private lateinit var emergencyCallButton: Button
     private lateinit var receiver: AirplaneModeChangeReceiver
+    private val requestCall = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,27 +30,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.activityContainer
+        registerBroadcastReceiver()
+        listenOnEmergencyCallButton()
+        listenOnBottomNavigation()
+    }
 
-
-        receiver = AirplaneModeChangeReceiver()
-        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
-            // registering the receiver
-            // it parameter which is passed in  registerReceiver() function
-            // is the intent filter that we have just created
-            registerReceiver(receiver, it)
-        }
-
-        val emergencyCallButton: View = findViewById<FloatingActionButton>(R.id.emergency_call_button)
-        emergencyCallButton.setOnClickListener {
-            callEmergencyNumber()
-        }
-
-        val button = findViewById<Button>(R.id.button);
-        button.setOnClickListener {
-            callEmergencyNumber()
-        }
-
+    private fun listenOnBottomNavigation() {
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.setOnItemSelectedListener { navItem ->
             when (navItem.itemId) {
@@ -66,17 +47,48 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this@MainActivity, RequestActivity::class.java)
                     startActivity(intent)
                 }
-                //TODO: add all other activity redirects here
+                R.id.ic_info -> {
+                    val intent = Intent(this@MainActivity, ImportantInformationActivity::class.java)
+                    startActivity(intent)
+                }
             }
             true
         }
-
     }
 
-//    override fun onStop() {
-//        super.onStop()
-////        unregisterReceiver(receiver)
-//    }
+    private fun listenOnEmergencyCallButton() {
+        emergencyCallButton = findViewById(R.id.button)
+        emergencyCallButton.setOnClickListener {
+            callEmergencyNumber()
+        }
+    }
+
+    private fun registerBroadcastReceiver() {
+        receiver = AirplaneModeChangeReceiver()
+        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
+            registerReceiver(receiver, it)
+        }
+    }
+
+    private fun callEmergencyNumber() {
+        val emergencyPhoneNumber = "0761954747"
+        val dialPhoneNumber = "tel:$emergencyPhoneNumber"
+
+        val doesNotHavePermission = ContextCompat.checkSelfPermission(
+            this@MainActivity,
+            Manifest.permission.CALL_PHONE
+        ) != PackageManager.PERMISSION_GRANTED
+
+        if (doesNotHavePermission) {
+            ActivityCompat.requestPermissions(
+                this@MainActivity,
+                arrayOf(Manifest.permission.CALL_PHONE),
+                requestCall
+            )
+        } else {
+            startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dialPhoneNumber)))
+        }
+    }
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -90,27 +102,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show()
             }
-        }
-    }
-
-    private fun callEmergencyNumber() {
-        val emergencyPhoneNumber = "0761954747";
-        val dialPhoneNumber = "tel:$emergencyPhoneNumber"
-
-
-        val isAllowed = ContextCompat.checkSelfPermission(
-            this@MainActivity,
-            Manifest.permission.CALL_PHONE
-        ) != PackageManager.PERMISSION_GRANTED
-
-        if (isAllowed) {
-            ActivityCompat.requestPermissions(
-                this@MainActivity,
-                arrayOf(Manifest.permission.CALL_PHONE),
-                requestCall
-            )
-        } else {
-            startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dialPhoneNumber)))
         }
     }
 }
