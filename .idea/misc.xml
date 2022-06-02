@@ -7,6 +7,7 @@
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/drawable/ic_foundation.xml" value="0.2295" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/drawable/ic_info.xml" value="0.1" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/layout/activity_foundation.xml" value="0.13095238095238096" />
+        <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/layout/activity_information.xml" value="0.20833333333333334" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/layout/activity_login.xml" value="0.234375" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/layout/app_bar_foundation.xml" value="0.13095238095238096" />
@@ -27,8 +28,10 @@
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/activity_navigation_drawer.xml" value="0.234375" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/activity_navigation_drawer_drawer.xml" value="0.2651282051282051" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/foundation.xml" value="0.19166666666666668" />
+        <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/foundation_activity_navigation_drawer.xml" value="0.20833333333333334" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/request.xml" value="0.23645833333333333" />
+        <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/menu/requests_activity_navigation_drawer.xml" value="0.3" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.196" />
         <entry key="..\:/Repos/RefugeeHelper/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.196" />
         <entry key="..\:/Repos/RefugeeHelperTemp/app/src/main/res/drawable/ic_foundation.xml" value="0.116" />

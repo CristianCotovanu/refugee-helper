@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.refugeehelper">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-<!--    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"-->
-<!--        tools:ignore="ProtectedPermissions" />-->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" -->
+    <!-- tools:ignore="ProtectedPermissions" /> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -16,6 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RefugeeHelper">
+        <activity
+            android:name=".important.InformationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_information" />
         <activity
             android:name=".requests.RequestActivity"
             android:exported="false"
@@ -31,6 +34,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

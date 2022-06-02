@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Refugee Helper First</string>
+    <string name="app_name">Refugee Helper</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_desc">Navigation header</string>
@@ -29,8 +29,12 @@
 
     <!--    Useful information strings section -->
     <string name="useful_information_bottom_menu">Useful Information</string>
+    <string name="title_activity_information">InformationActivity</string>
 
     <string name="add_new_entry">Add new entry</string>
     <string name="emergency_call">Emergency call</string>
     <string name="emergency_call_button_text">Emergency Call</string>
+    <string name="main_description">this is the main description</string>
+    <string name="main_title">Refugee Helper</string>
+    <string name="main_page_image">Main page image</string>
 </resources>

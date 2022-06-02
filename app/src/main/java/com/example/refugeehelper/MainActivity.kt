@@ -13,7 +13,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.refugeehelper.databinding.ActivityMainBinding
 import com.example.refugeehelper.foundations.FoundationActivity
-import com.example.refugeehelper.important.ImportantInformationActivity
+import com.example.refugeehelper.important.InformationActivity
 import com.example.refugeehelper.requests.RequestActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.ic_info -> {
-                    val intent = Intent(this@MainActivity, ImportantInformationActivity::class.java)
+                    val intent = Intent(this@MainActivity, InformationActivity::class.java)
                     startActivity(intent)
                 }
             }
