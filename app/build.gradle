@@ -39,7 +39,7 @@ android {
         main {
             res.srcDirs = ['src/main/res',
                            'src/main/res/layouts/foundations',
-                           'src/main/res/layouts/requests'
+                           'src/main/res/layouts/requests', 'src\\main\\res', 'src\\main\\res\\importantinformation'
             ]
 
 //            res {

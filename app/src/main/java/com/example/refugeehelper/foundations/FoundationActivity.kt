@@ -30,6 +30,9 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.time.OffsetDateTime
 
 
@@ -45,6 +48,13 @@ class FoundationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         database = Firebase.database.reference
+        GlobalScope.launch {
+            try {
+                fetchAndDisplayFoundations()
+            } catch (e: Exception) {
+                Log.e("Coroutine:", "launch failed")
+            }
+        }
 
         binding = ActivityFoundationBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -67,8 +77,6 @@ class FoundationActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        fetchAndDisplayFoundations()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -209,15 +217,23 @@ class FoundationActivity : AppCompatActivity() {
         builder.setPositiveButton(
             "Save"
         ) { dialog, which ->
-            saveFoundation(
-                Foundation(
-                    nameInput.text.toString(),
-                    descriptionInput.text.toString(),
-                    phoneNumberInput.text.toString(),
-                    websiteInput.text.toString(),
-                    OffsetDateTime.now().toString()
-                )
-            )
+
+            GlobalScope.launch {
+                try {
+                    saveFoundation(
+                        Foundation(
+                            nameInput.text.toString(),
+                            descriptionInput.text.toString(),
+                            phoneNumberInput.text.toString(),
+                            websiteInput.text.toString(),
+                            OffsetDateTime.now().toString()
+                        )
+                    )
+                } catch (e: Exception) {
+                    Log.e("Coroutine:", "launch failed")
+                }
+            }
+
             Snackbar.make(
                 view,
                 "Foundation " + nameInput.text.toString() + " was added successfully",

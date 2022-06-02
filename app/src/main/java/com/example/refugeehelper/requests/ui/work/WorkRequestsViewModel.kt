@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class WorkRequestsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is work requests Fragment"
+        value = "There are no work requests to be displayed..."
     }
     val text: LiveData<String> = _text
 }

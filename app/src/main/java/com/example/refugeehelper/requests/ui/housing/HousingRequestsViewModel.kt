@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 
 class HousingRequestsViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "This is housing requests Fragment"
+        value = "There are no housing requests to be displayed..."
     }
     val text: LiveData<String> = _text
 }
